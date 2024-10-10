@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <h2 class="text-center">Lista de Usuarios</h2>
+  <ul class="list-group">
+    <li *ngFor="let usuario of usuarios" class="list-group-item">
+      <strong>{{ usuario.nombre }}</strong> - {{ usuario.email }} - Empresa: {{ usuario.empresa }}
+    </li>
+  </ul>
+
+  <h2 class="mt-4">Agregar Usuario</h2>
+  <form (ngSubmit)="agregarUsuario()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" [(ngModel)]="nuevoUsuario.nombre" name="nombre" class="form-control" id="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" [(ngModel)]="nuevoUsuario.email" name="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="empresa" class="form-label">Empresa</label>
+      <input type="text" [(ngModel)]="nuevoUsuario.empresa" name="empresa" class="form-control" id="empresa" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+  </form>
+
+  <!-- Formulario para Modificar Usuario -->
+  <h2 class="mt-4">Modificar Usuario</h2>
+  <form (ngSubmit)="modificarUsuario()">
+    <div class="mb-3">
+      <label for="usuarioId" class="form-label">ID del Usuario</label>
+      <input type="number" [(ngModel)]="idModificar" name="usuarioId" class="form-control" id="usuarioId" required>
+    </div>
+    <button type="button" class="btn btn-info" (click)="cargarDatosUsuario()">Cargar Datos</button>
+
+    <div *ngIf="usuarioModificar" class="mt-3">
+      <div class="mb-3">
+        <label for="nombreModificar" class="form-label">Nombre</label>
+        <input type="text" [(ngModel)]="usuarioModificar.nombre" name="nombreModificar" class="form-control" id="nombreModificar" required>
+      </div>
+      <div class="mb-3">
+        <label for="emailModificar" class="form-label">Email</label>
+        <input type="email" [(ngModel)]="usuarioModificar.email" name="emailModificar" class="form-control" id="emailModificar" required>
+      </div>
+      <div class="mb-3">
+        <label for="empresaModificar" class="form-label">Empresa</label>
+        <input type="text" [(ngModel)]="usuarioModificar.empresa" name="empresaModificar" class="form-control" id="empresaModificar" required>
+      </div>
+      <button type="submit" class="btn btn-warning">Modificar Usuario</button>
+    </div>
+  </form>
+
+  <!-- Formulario para Eliminar Usuario -->
+  <h2 class="mt-4">Eliminar Usuario</h2>
+  <form (ngSubmit)="eliminarUsuario()">
+    <div class="mb-3">
+      <label for="idEliminar" class="form-label">ID del Usuario a Eliminar</label>
+      <input type="number" [(ngModel)]="idEliminar" name="idEliminar" class="form-control" id="idEliminar" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Eliminar Usuario</button>
+  </form>
+</div>

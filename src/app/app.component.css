@@ -1,0 +1,75 @@
+/* src/app/app.component.css */
+
+/* Estilo para todo el contenedor */
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para los títulos */
+  h2 {
+    color: #4a4a4a;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Estilo para los elementos de la lista */
+  .list-group-item {
+    font-size: 1.1em;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo del botón para agregar usuario */
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  /* Estilos para formularios */
+  .form-control {
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  /* Tarjetas */
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+      
